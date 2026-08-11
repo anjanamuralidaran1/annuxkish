@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>annu + kishu</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient-bg" aria-hidden="true">
+    <span class="orb orb-blue"></span>
+    <span class="orb orb-green"></span>
+    <span class="orb orb-yellow"></span>
+    <span class="orb orb-cyan"></span>
+    <span class="spark s1"></span><span class="spark s2"></span><span class="spark s3"></span>
+    <span class="spark s4"></span><span class="spark s5"></span><span class="spark s6"></span>
+  </div>
+  <header class="hero">
+    <div class="nav-wrap">
+      <div class="brand">annu + kishu</div>
+      <button class="ghost-btn" id="favoritesBtn">♡ our list</button>
+    </div>
+
+    <div class="hero-copy">
+      <p class="eyebrow">things we should do instead of saying “idk what do you wanna do”</p>
+      <h1>pick something. anything.</h1>
+      <p class="sub">for when we’re bored, indecisive, broke, out, home, or somehow all of the above.</p>
+      <div class="hero-actions">
+        <button class="primary-btn" id="boredBtn">we’re bored</button>
+        <button class="secondary-btn" id="surpriseBtn">pick for us</button>
+      </div>
+      <p class="tiny-note" id="tinyJoke">see how easy that was</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls section-wrap">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">browse</p>
+          <h2>what are we feeling</h2>
+        </div>
+        <button class="text-btn" id="clearFilters">clear filters</button>
+      </div>
+
+      <div class="category-grid" id="categoryFilters">
+        <button data-category="all" class="chip active">everything</button>
+        <button data-category="stay in" class="chip">stay in</button>
+        <button data-category="go out" class="chip">get out of the house</button>
+        <button data-category="cheap" class="chip">we're broke</button>
+        <button data-category="brain" class="chip">use our brains</button>
+        <button data-category="make" class="chip">make something</button>
+        <button data-category="kishu" class="chip">kishu activities™</button>
+        <button data-category="annu" class="chip">annu activities™</button>
+      </div>
+
+      <div class="tag-row" id="tagFilters">
+        <button data-tag="free" class="mini-chip">free</button>
+        <button data-tag="$" class="mini-chip">$</button>
+        <button data-tag="$$" class="mini-chip">$$</button>
+        <button data-tag="home" class="mini-chip">home</button>
+        <button data-tag="30 min" class="mini-chip">30 min</button>
+        <button data-tag="few hours" class="mini-chip">few hours</button>
+        <button data-tag="competitive" class="mini-chip">competitive</button>
+        <button data-tag="chill" class="mini-chip">chill</button>
+      </div>
+    </section>
+
+    <section class="section-wrap">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">ideas</p>
+          <h2 id="resultsTitle">stuff we should do</h2>
+        </div>
+        <span class="count" id="resultCount"></span>
+      </div>
+      <div class="card-grid" id="activityGrid"></div>
+    </section>
+
+    <section class="section-wrap done-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">later</p>
+          <h2>we actually did it</h2>
+        </div>
+      </div>
+      <div class="done-empty">once you check stuff off, it’ll show up here. shocking concept, i know.</div>
+    </section>
+  </main>
+
+  <div class="modal" id="randomModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="close-btn" id="closeModal">×</button>
+      <p class="eyebrow">your mission</p>
+      <h2 id="randomTitle">build a fort</h2>
+      <div class="modal-tags" id="randomTags"></div>
+      <div class="modal-actions">
+        <button class="primary-btn" id="acceptMission">okay fine</button>
+        <button class="secondary-btn" id="reroll">ew pick another</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>annu + kishu</span>
+    <button id="hateBtn" class="footer-joke">why do you hate me?</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
